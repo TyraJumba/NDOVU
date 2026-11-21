@@ -164,7 +164,12 @@ class Lexer:
                 tokens.append(Token(t_type, char, self.line, start_col))
                 self.advance()
                 continue
-
+# Delimiters (Braces and Parentheses)
+            if char in '{}()':
+                start_col = self.column
+                tokens.append(Token('DELIMITER', char, self.line, start_col))
+                self.advance()
+                continue
             # Lexical Error: Illegal character encountered (e.g., @, $, %)
             self.error(f"Illegal character '{char}'")
 
