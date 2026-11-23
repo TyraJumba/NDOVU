@@ -15,5 +15,5 @@ def run_file(filepath):
     print()
 
 if __name__ == "__main__":
-    run_file("examples/valid/test1.nia")
-    run_file("examples/invalid/bad_char.nia")
+    run_file("examples/valid/test_1.ndovu")
+    run_file("examples/invalid/test_1.ndovu")
